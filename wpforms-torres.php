@@ -18,7 +18,9 @@
     // Fields are in JSON, so we decode to an array
     $entry_fields = json_decode( $entry->fields, true );
 
-    print_r( $entry_fields[27]['amount'] );
+    print_r( $entry_fields );
+
+    print_r( $entry_fields[27]['amount_raw'] );
 
     //print_r( $entry[1] );
 
