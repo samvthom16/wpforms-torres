@@ -12,9 +12,17 @@
 
     print_r( $form_data['settings']['notifications'][4] );
 
-    print_r( $entry[1] );
+    // Get the full entry object
+    $entry = wpforms()->entry->get( $entry_id );
 
-    print_r( $entry[27] );
+    // Fields are in JSON, so we decode to an array
+    $entry_fields = json_decode( $entry->fields, true );
+
+    print_r( $entry_fields );
+
+    //print_r( $entry[1] );
+
+    //print_r( $entry[27] );
 
     /*
     // Optional, you can limit to specific forms. Below, we restrict output to
