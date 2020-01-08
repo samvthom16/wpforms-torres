@@ -10,6 +10,8 @@
 
   function wpf_dev_process_complete( $fields, $entry, $form_data, $entry_id ) {
 
+    print_r( $form_data );
+
     print_r( $entry );
 
     /*
