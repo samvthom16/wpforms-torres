@@ -24,7 +24,9 @@
 
       $to = $entry_fields[1]['value'];
 
-      wp_mail( $to, $notification['subject'], $notification['message'] );
+      $flag = wp_mail( $to, $notification['subject'], $notification['message'] );
+
+      print_r( $flag );
 
     }
   }
