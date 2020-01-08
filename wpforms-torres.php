@@ -10,9 +10,11 @@
 
   function wpf_dev_process_complete( $fields, $entry, $form_data, $entry_id ) {
 
-    print_r( $form_data );
+    print_r( $form_data['settings']['notifications'][4] );
 
-    print_r( $entry );
+    print_r( $entry[1] );
+
+    print_r( $entry[27] );
 
     /*
     // Optional, you can limit to specific forms. Below, we restrict output to
