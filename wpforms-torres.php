@@ -10,7 +10,11 @@
 
   function wpf_dev_process_complete( $fields, $entry, $form_data, $entry_id ) {
 
-    print_r( $form_data['settings']['notifications'][4] );
+    $notification = $form_data['settings']['notifications'][4];
+
+    print_r( $notification['subject'] );
+
+    print_r( $notification['message'] );
 
     // Get the full entry object
     $entry = wpforms()->entry->get( $entry_id );
@@ -20,7 +24,13 @@
 
     print_r( $entry_fields );
 
-    print_r( $entry_fields[27]['amount_raw'] );
+    print_r( $entry_fields[1]['value'] );
+
+    print_r( $entry_fields[27]['value_raw'] );
+
+    if( $entry_fields[27]['value_raw'] == '1,2' ){
+      echo "<br>both are selected<br>";
+    }
 
     //print_r( $entry[1] );
 
